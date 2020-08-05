@@ -12,19 +12,4 @@ const IndexPage = () => (
   </App>
 );
 
-export async function getStaticProps() {
-  const apolloClient = initializeApollo();
-
-  await apolloClient.query({
-    query: ALL_COLLECTIONS,
-  });
-
-  return {
-    props: {
-      initialApolloState: apolloClient.cache.extract(),
-    },
-    revalidate: 1,
-  };
-}
-
 export default IndexPage;
