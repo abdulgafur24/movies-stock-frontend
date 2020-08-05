@@ -7,7 +7,7 @@ function createApolloClient() {
   return new ApolloClient({
     ssrMode: typeof window === "undefined",
     link: new HttpLink({
-      uri: "https://movies-stock.herokuapp.com/",
+      uri: process.env.API_URL,
       credentials: "same-origin",
     }),
     cache: new InMemoryCache(),
