@@ -1,45 +1,31 @@
-# Apollo Example
+# Movies collection CRUD application
 
-[Apollo](https://www.apollographql.com/client/) is a GraphQL client that allows you to easily query the exact data you need from a GraphQL server. In addition to fetching and mutating data, Apollo analyzes your queries and their results to construct a client-side cache of your data, which is kept up to date as further queries and mutations are run.
 
-In this simple example, we integrate Apollo seamlessly with [Next.js data fetching methods](https://nextjs.org/docs/basic-features/data-fetching) to fetch queries in the server and hydrate them in the browser.
+This application contains following:
+- page with collections
+  - collection has name and movies count
+  - form for adding new collection
+- page with specific collection
+  - movies list
+  - movie has name
+  - form for adding new movie
+  - remove movie from collection
 
-This example relies on [graph.cool](https://www.graph.cool) for its GraphQL backend.
 
-## Demo
+## Clone
 
-[https://next-with-apollo.now.sh](https://next-with-apollo.now.sh)
-
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-apollo)
-
-## How to use
-
-### Using `create-next-app`
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+Just clone this repo
 
 ```bash
-npx create-next-app --example with-apollo with-apollo-app
-# or
-yarn create next-app --example with-apollo with-apollo-app
+git clone https://github.com/abdulgafur24/movies-stock-frontend.git
 ```
 
-### Download manually
 
-Download the example:
-
-```bash
-curl https://codeload.github.com/vercel/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/with-apollo
-cd with-apollo
-```
-
-Install it and run:
+## How to start locally
 
 ```bash
+cd movies-stock-frontend
+
 npm install
 npm run dev
 # or
@@ -47,4 +33,8 @@ yarn
 yarn dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+By default it will connect to already deployed API.
+
+### Change Api url
+
+Go to root directory and open `next.config.js` file and simply change value for `API_URL` key.
